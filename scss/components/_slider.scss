@@ -1,15 +1,65 @@
 
 .slide-container {
   position: relative;
-  max-width: 100%;
+  width: 100vw;
+  height: 75vh;
   margin: auto;
-  top: 0px;
+  top: 0;
   .slide {
     height: 100%;
     width: 100%;
+    display: none;
     img {
       height: 100%;
       width: 100%;
     }
   }
+  .active {
+    display: block;
+  }
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  width: 5%;
+  height: 10%;
+  outline: none;
+  background: transparent;
+  border: none;
+  transition: all .3s ease;
+  color: #ffffff;
+
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #000000;
+}
+
+.next {
+  right: 0;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.2s;
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
