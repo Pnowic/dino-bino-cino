@@ -1,5 +1,5 @@
 
-.slide-container {
+.slider {
   position: relative;
   width: 100vw;
   height: 75vh;
@@ -9,14 +9,21 @@
     height: 100%;
     width: 100%;
     display: none;
-    img {
-      height: 100%;
-      width: 100%;
-    }
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .slide-one {
+    background-image: url("./../assets/Layer 5.jpg");
+  }
+  .slide-two {
+    background-image: url("./../assets/Warstwa 1.jpg");
+  }
+  .slide-three {
+    background-image: url("./../assets/Warstwa 2.jpg");
   }
   .active {
     display: block;
   }
+
 }
 
 .prev,
@@ -33,33 +40,29 @@
   border: none;
   transition: all .3s ease;
   color: #ffffff;
-
-}
-
-.prev:hover,
-.next:hover {
-  background: rgba(255, 255, 255, 0.3);
-  color: #000000;
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #000000;
+  }
 }
 
 .next {
   right: 0;
 }
 
-
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.2s;
+  -webkit-animation-duration: 2s;
   animation-name: fade;
-  animation-duration: 1.2s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
+  from {opacity: 0}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4}
+  from {opacity: 0}
   to {opacity: 1}
 }
